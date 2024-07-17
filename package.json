@@ -3,7 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "electron/main.js",
+  "main": "electron/main/main.ts",
+  "keywords": [
+    "electron",
+    "rollup",
+    "vite",
+    "react",
+    "typescript"
+  ],
+  "debug": {
+    "env": {
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:5173/"
+    }
+  },
   "scripts": {
     "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build",
@@ -12,10 +24,14 @@
     "electron:build": "vite build && electron ."
   },
   "dependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/lodash": "^4.17.7",
     "concurrently": "^8.2.2",
     "electron": "^31.2.1",
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.0",
     "wait-on": "^7.2.0"
   },
   "devDependencies": {
