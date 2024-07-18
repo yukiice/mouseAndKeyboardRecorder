@@ -5,7 +5,7 @@ import {ComponentType, lazy, Suspense, useEffect} from 'react';
 // 使用import.meta.glob动态导入views目录下的所有文件
 const views = import.meta.glob('@/pages/**/*.tsx');
 // 定义正则表达式匹配文件路径
-const regex = /\/src\/views\/(.*)\/index\.tsx/;
+const regex = /\/src\/pages\/(.*)\/index\.tsx/;
 // 为每个文件创建一个RouteObject
 const routesPromise: Promise<RouteObject>[] = Object.keys(views).map((key) => {
     const match = key.match(regex);

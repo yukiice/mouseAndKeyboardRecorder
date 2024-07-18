@@ -8,7 +8,6 @@ function App() {
     const routing = useRoutes(routes || []);
     useEffect(() => {
         getRoutes().then(r => {
-            console.log(r);
             setRoutes(r);
         });
     }, []);
